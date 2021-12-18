@@ -25,6 +25,7 @@ flutter:
   assets:
     - assets/
     - assets/icons/
+    - assets/images/
     - assets/animations/car_animation1.json
     - assets/animations/splash.json
     - assets/animations/login.json
