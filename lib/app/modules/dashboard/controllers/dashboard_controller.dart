@@ -1,20 +1,39 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quicki/app/data/repositories/session_manager.dart';
+import 'package:quicki/app/data/services/location_fetcher.dart';
+import 'package:quicki/app/enum/bottom_navbar_enum.dart';
+import 'package:quicki/app/utils/permission_helper.dart';
 
 class DashboardController extends GetxController {
-  //TODO: Implement DashboardController
 
-  final count = 0.obs;
+  final selectedTab = BottomNavBarEnum.home.obs;
+  final currentPage = 0.obs;
+  PageController _pageController;
+  final _showLocationRequestDialog = false.obs;
+  String errorMessage;
+
+  bool get showLocationRequestDialog => _showLocationRequestDialog.value;
+  PageController get pageController => _pageController;
+
   @override
-  void onInit() {
+  onInit() {
     super.onInit();
+    startLocationPermission();
+    PageController(initialPage: 0, keepPage: true);
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  void setShowLocationRequestStatus(bool status) => _showLocationRequestDialog.value = status;
+
+  startLocationPermission() async {
+    bool locationPermissionStatus =
+    await LocationPermissionHelper.isPermissionEnabled();
+    if(!locationPermissionStatus) setShowLocationRequestStatus(true);
+    final _locationData = await LocationFetcher.determinePosition();
+    SessionManager.instance.setCurrentLocation(_locationData);
   }
 
   @override
   void onClose() {}
-  void increment() => count.value++;
+
 }

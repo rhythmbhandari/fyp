@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import 'package:quicki/app/modules/auth/bindings/auth_binding.dart';
 import 'package:quicki/app/modules/auth/views/auth_view.dart';
+import 'package:quicki/app/modules/booking/bindings/booking_binding.dart';
+import 'package:quicki/app/modules/booking/views/booking_view.dart';
 import 'package:quicki/app/modules/dashboard/bindings/dashboard_binding.dart';
 import 'package:quicki/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:quicki/app/modules/history/bindings/history_binding.dart';
@@ -85,6 +87,11 @@ class AppPages {
       name: _Paths.OTP,
       page: () => OtpView(),
       binding: OtpBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOOKING,
+      page: () => BookingView(),
+      binding: BookingBinding(),
     ),
   ];
 }

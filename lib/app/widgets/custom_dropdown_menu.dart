@@ -22,10 +22,10 @@ class CustomDropDownMenu extends StatelessWidget {
     return DropdownButtonHideUnderline(
       child: DropdownButton<String>(
         style: Theme.of(context).textTheme.bodyText2.copyWith(
-          fontSize:getResponsiveFont(18),
-          color: color,
-          fontWeight: FontWeight.w600,
+          fontSize: getResponsiveFont(16),
+          color: Colors.black,
           letterSpacing: 2.0,
+          fontWeight: FontWeight.w600,
         ),
         value: value,
         items: itemList

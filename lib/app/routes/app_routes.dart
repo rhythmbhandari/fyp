@@ -16,6 +16,7 @@ abstract class Routes {
   static const PHONE_LOGINCLEAR = _Paths.PHONE_LOGINCLEAR;
   static const SIGNUP = _Paths.SIGNUP;
   static const OTP = _Paths.OTP;
+  static const BOOKING = _Paths.BOOKING;
 }
 
 abstract class _Paths {
@@ -31,4 +32,5 @@ abstract class _Paths {
   static const PHONE_LOGINCLEAR = '/phone-loginclear';
   static const SIGNUP = '/signup';
   static const OTP = '/otp';
+  static const BOOKING = '/booking';
 }
