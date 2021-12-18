@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import 'package:quicki/app/modules/auth/bindings/auth_binding.dart';
 import 'package:quicki/app/modules/auth/views/auth_view.dart';
+import 'package:quicki/app/modules/dashboard/bindings/dashboard_binding.dart';
+import 'package:quicki/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:quicki/app/modules/history/bindings/history_binding.dart';
 import 'package:quicki/app/modules/history/views/history_view.dart';
 import 'package:quicki/app/modules/home/bindings/home_binding.dart';
@@ -20,7 +22,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.SPLASH;
 
   static final routes = [
     GetPage(
@@ -57,6 +59,11 @@ class AppPages {
       name: _Paths.HISTORY,
       page: () => HistoryView(),
       binding: HistoryBinding(),
+    ),
+    GetPage(
+      name: _Paths.DASHBOARD,
+      page: () => DashboardView(),
+      binding: DashboardBinding(),
     ),
   ];
 }
