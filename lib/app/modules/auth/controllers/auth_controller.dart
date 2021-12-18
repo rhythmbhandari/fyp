@@ -1,20 +1,33 @@
 import 'package:get/get.dart';
+import 'package:quicki/app/data/repositories/session_manager.dart';
+import 'package:quicki/app/data/repositories/user_repository.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthController extends GetxController {
-  //TODO: Implement AuthController
+  final progressStatus = false.obs;
 
-  final count = 0.obs;
+  showProgressBar() => progressStatus.value = true;
+  hideProgressBar() => progressStatus.value = false;
+  UserRepository _userRepository;
+  SharedPreferences _sharedPreferences;
+
   @override
   void onInit() {
     super.onInit();
+    initializeData();
+
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  initializeData() async{
+    _sharedPreferences = await SharedPreferences.getInstance();
+    _userRepository = UserRepository(prefs: _sharedPreferences);
   }
+
 
   @override
   void onClose() {}
-  void increment() => count.value++;
+
+  Future<void> saveToken() async{
+    await _userRepository.login(SessionManager.instance.accessToken);
+  }
 }

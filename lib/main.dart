@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'app/routes/app_pages.dart';
+import 'config/theme.dart';
 
 void main() {
   runApp(
@@ -15,8 +16,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Quicki()
+    return MaterialApp(
+
+      home: const Quicki()
     );
   }
 }
@@ -32,7 +34,9 @@ class _QuickiState extends State<Quicki> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: "Application",
+      title: "Quicki",
+      theme: kThemeData,
+      debugShowCheckedModeBanner: false,
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
     );

@@ -12,8 +12,12 @@ import 'package:quicki/app/modules/notification/bindings/notification_binding.da
 import 'package:quicki/app/modules/notification/views/notification_view.dart';
 import 'package:quicki/app/modules/onboarding/bindings/onboarding_binding.dart';
 import 'package:quicki/app/modules/onboarding/views/onboarding_view.dart';
+import 'package:quicki/app/modules/phone_login/bindings/phone_login_binding.dart';
+import 'package:quicki/app/modules/phone_login/views/phone_login_view.dart';
 import 'package:quicki/app/modules/profile/bindings/profile_binding.dart';
 import 'package:quicki/app/modules/profile/views/profile_view.dart';
+import 'package:quicki/app/modules/signup/bindings/signup_binding.dart';
+import 'package:quicki/app/modules/signup/views/signup_view.dart';
 import 'package:quicki/app/modules/splash/bindings/splash_binding.dart';
 import 'package:quicki/app/modules/splash/views/splash_view.dart';
 
@@ -64,6 +68,16 @@ class AppPages {
       name: _Paths.DASHBOARD,
       page: () => DashboardView(),
       binding: DashboardBinding(),
+    ),
+    GetPage(
+      name: _Paths.PHONE_LOGIN,
+      page: () => PhoneLoginView(),
+      binding: PhoneLoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.SIGNUP,
+      page: () => SignupView(),
+      binding: SignupBinding(),
     ),
   ];
 }

@@ -7,6 +7,7 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.2
+  flutter_svg: ^0.22.0
   google_maps_flutter: ^2.1.1
   get: 4.3.8
   lottie: ^1.2.1
@@ -29,6 +30,7 @@ flutter:
     - assets/animations/car_animation1.json
     - assets/animations/splash.json
     - assets/animations/login.json
+    - assets/svg_images/
   fonts:
     - family: Montserrat
       fonts:
