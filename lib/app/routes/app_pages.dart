@@ -12,6 +12,8 @@ import 'package:quicki/app/modules/notification/bindings/notification_binding.da
 import 'package:quicki/app/modules/notification/views/notification_view.dart';
 import 'package:quicki/app/modules/onboarding/bindings/onboarding_binding.dart';
 import 'package:quicki/app/modules/onboarding/views/onboarding_view.dart';
+import 'package:quicki/app/modules/otp/bindings/otp_binding.dart';
+import 'package:quicki/app/modules/otp/views/otp_view.dart';
 import 'package:quicki/app/modules/phone_login/bindings/phone_login_binding.dart';
 import 'package:quicki/app/modules/phone_login/views/phone_login_view.dart';
 import 'package:quicki/app/modules/profile/bindings/profile_binding.dart';
@@ -78,6 +80,11 @@ class AppPages {
       name: _Paths.SIGNUP,
       page: () => SignupView(),
       binding: SignupBinding(),
+    ),
+    GetPage(
+      name: _Paths.OTP,
+      page: () => OtpView(),
+      binding: OtpBinding(),
     ),
   ];
 }
