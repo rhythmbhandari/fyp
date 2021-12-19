@@ -75,14 +75,14 @@ class SignupController extends GetxController {
     bool isValid = false;
 
     if (!(firstName.length > 1 && Validator.isName(firstName))) {
-      _errorText = 'first_name_error'.tr;
+      _errorText = 'Please enter valid first name.'.tr;
     } else if (!(lastNameController.value.text.length > 1 &&
         Validator.isName(lastNameController.value.text))) {
-      _errorText = 'last_name_error'.tr;
+      _errorText = 'Please enter valid last name.'.tr;
     } else if (!(Validator.isEmail(emailController.value.text))) {
-      _errorText = 'valid_email_error'.tr;
+      _errorText = 'Please enter valid email address.'.tr;
     } else if (dateToString(_dob.value) == dateToString(DateTime.now())) {
-      _errorText = 'valid_dob'.tr;
+      _errorText = 'Please enter valid date of birth.'.tr;
     } else {
       isValid = true;
     }

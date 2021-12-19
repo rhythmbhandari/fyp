@@ -41,6 +41,7 @@ flutter:
     - assets/images/ad2.png
     - assets/images/ad3.png
     - assets/images/pin.png
+    - assets/images/phone.png
     - assets/animations/car_animation1.json
     - assets/animations/splash.json
     - assets/animations/login.json
