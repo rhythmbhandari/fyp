@@ -36,11 +36,15 @@ flutter:
   assets:
     - assets/
     - assets/icons/
-    - assets/images/
+    - assets/images/ad1.png
+    - assets/images/ad2.png
+    - assets/images/ad3.png
+    - assets/images/pin.png
     - assets/animations/car_animation1.json
     - assets/animations/splash.json
     - assets/animations/login.json
     - assets/svg_images/
+
   fonts:
     - family: Montserrat
       fonts:

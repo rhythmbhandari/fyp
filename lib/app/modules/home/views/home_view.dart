@@ -116,7 +116,7 @@ class HomeView extends GetView<HomeController> {
                     width: Get.width,
                     color: Colors.white,
                     padding:
-                    EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -132,7 +132,7 @@ class HomeView extends GetView<HomeController> {
                   Card(
                     margin: EdgeInsets.zero,
                     child: CarousalView(
-                      imageUrlList: const [
+                      imageUrlList:  [
                         'assets/images/ad1.png',
                         'assets/images/ad2.png',
                         'assets/images/ad3.png',
@@ -169,7 +169,7 @@ class HomeView extends GetView<HomeController> {
                         const SizedBox(height: 16),
                         Center(
                             child: SvgPicture.asset(
-                              'assets/svg_assets/discount.svg',
+                              'assets/svg_images/discount.svg',
                               height: Get.height * 0.3,
                               fit: BoxFit.contain,
                             )),

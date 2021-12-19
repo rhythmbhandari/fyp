@@ -24,6 +24,8 @@ import 'package:quicki/app/modules/signup/bindings/signup_binding.dart';
 import 'package:quicki/app/modules/signup/views/signup_view.dart';
 import 'package:quicki/app/modules/splash/bindings/splash_binding.dart';
 import 'package:quicki/app/modules/splash/views/splash_view.dart';
+import 'package:quicki/app/modules/trip/bindings/trip_binding.dart';
+import 'package:quicki/app/modules/trip/views/trip_view.dart';
 
 part 'app_routes.dart';
 
@@ -92,6 +94,11 @@ class AppPages {
       name: _Paths.BOOKING,
       page: () => BookingView(),
       binding: BookingBinding(),
+    ),
+    GetPage(
+      name: _Paths.TRIP,
+      page: () => TripView(),
+      binding: TripBinding(),
     ),
   ];
 }
